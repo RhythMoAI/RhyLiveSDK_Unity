@@ -1,0 +1,159 @@
+# Macro for Unity YAML-based asset files.
+[attr]unityyaml -text merge=unityyamlmerge diff
+
+# Macro for all binary files that should use Git LFS.
+[attr]lfs binary filter=lfs diff=lfs merge=lfs
+
+# Set end of line character for all files
+* text=auto eol=crlf
+
+# Code
+*.cs text diff=csharp
+
+# Unity Text Assets
+*.meta                  unityyaml
+*.unity                 unityyaml
+*.asset                 unityyaml
+*.prefab                unityyaml
+*.mat                   unityyaml
+*.anim                  unityyaml
+*.controller            unityyaml
+*.overrideController    unityyaml
+*.physicMaterial        unityyaml
+*.physicsMaterial2D     unityyaml
+*.playable              unityyaml
+*.mask                  unityyaml
+*.brush                 unityyaml
+*.flare                 unityyaml
+*.fontsettings          unityyaml
+*.guiskin               unityyaml
+*.giparams              unityyaml
+*.renderTexture         unityyaml
+*.spriteatlas           unityyaml
+*.terrainlayer          unityyaml
+*.mixer                 unityyaml
+*.shadervariants        unityyaml
+*.preset                unityyaml
+*.asmdef                -text diff
+
+# Unity Binary Assets
+*.cubemap               lfs
+*.unitypackage          lfs
+# Note: Unity terrain assets must have "-Terrain" suffix.
+*-[Tt]errain.asset      -unityyaml lfs
+# Note: Unity navmesh assets must have "-NavMesh" suffix.
+*-[Nn]av[Mm]esh.asset   -unityyaml lfs
+
+# "physic" for 3D but "physics" for 2D
+*.physicMaterial2D   unityyaml
+*.physicMaterial     unityyaml
+*.physicsMaterial2D  unityyaml
+*.physicsMaterial    unityyaml
+
+# Image
+*.jpg       lfs
+*.jpeg      lfs
+*.png       lfs
+*.apng      lfs
+*.atsc      lfs
+*.gif       lfs
+*.bmp       lfs
+*.exr       lfs
+*.tga       lfs
+*.tiff      lfs
+*.tif       lfs
+*.iff       lfs
+*.pict      lfs
+*.dds       lfs
+*.xcf       lfs
+*.leo       lfs
+*.kra       lfs
+*.kpp       lfs
+*.clip      lfs
+*.webm      lfs
+*.webp      lfs
+*.svg       lfs
+*.svgz      lfs
+*.psd       lfs
+*.afphoto   lfs
+*.afdesign  lfs
+
+# Audio
+*.mp3       lfs
+*.ogg       lfs
+*.wav       lfs
+*.aiff      lfs
+*.aif       lfs
+*.mod       lfs
+*.it        lfs
+*.s3m       lfs
+*.xm        lfs
+
+# Video
+*.mov       lfs
+*.avi       lfs
+*.asf       lfs
+*.mpg       lfs
+*.mpeg      lfs
+*.mp4       lfs
+*.flv       lfs
+*.ogv       lfs
+*.wmv       lfs
+
+# 3D
+*.3dm       lfs
+*.3ds       lfs
+*.blend     lfs
+*.c4d       lfs
+*.collada   lfs
+*.dae       lfs
+*.dxf       lfs
+*.FBX       lfs
+*.fbx       lfs
+*.jas       lfs
+*.lws       lfs
+*.lxo       lfs
+*.ma        lfs
+*.max       lfs
+*.mb        lfs
+*.obj       lfs
+*.ply       lfs
+*.skp       lfs
+*.stl       lfs
+*.ztl       lfs
+*.blender   lfs
+*.dfx       lfs
+*.lwo       lfs
+*.lwo2      lfs
+*.abc       lfs
+*.bin       lfs
+*.glb       lfs
+
+# Executables
+*.exe       lfs
+*.dll       lfs
+*.so        lfs
+*.pdb       lfs
+*.mdb       lfs
+
+# Packaging
+*.apk       lfs
+*.nupkg     lfs
+*.zip       lfs
+*.7z        lfs
+*.gz        lfs
+*.rar       lfs
+*.tar       lfs
+*.bz2       lfs
+
+# Fonts
+*.otf       lfs
+*.ttf       lfs
+
+# Documents
+*.pdf       lfs
+
+# ETC
+*.a         lfs
+*.rns       lfs
+*.reason    lfs
